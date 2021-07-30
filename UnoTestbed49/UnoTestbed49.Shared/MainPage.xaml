@@ -6,8 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+	<Page.DataContext>
+		<local:DC />
+	</Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<TextBlock Text="Hello, world!" Margin="20" FontSize="30" />
-    </Grid>
+		<local:MyControl>
+			<local:MyControl.MyContent>
+				<local:SizeContent Size="{Binding Size}" />
+			</local:MyControl.MyContent>
+		</local:MyControl>
+    </StackPanel>
 </Page>

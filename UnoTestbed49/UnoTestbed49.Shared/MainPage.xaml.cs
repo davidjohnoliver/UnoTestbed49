@@ -27,4 +27,10 @@ namespace UnoTestbed49
 			this.InitializeComponent();
 		}
 	}
+
+	public class DC
+	{
+		public double Size => 18;
+	}
+
 }
